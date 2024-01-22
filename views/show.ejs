@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post in detail</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h3>This is your full post</h3>
+    post id : <%= post.id %>
+    <div>
+      <h3 class="username">Username : <%= post.username %></h3>
+      <p class="content">Content : <%= post.content %></p>
+    </div>
+    <form action="/posts/<%= post.id %>/edit" method="patch">
+      <button class="btn-sm">Edit Your post</button>
+    </form>
+  </body>
+</html>
